@@ -40,17 +40,72 @@
 }
 
 @layer components {
-  .snap-scroll {
-    scroll-snap-type: y mandatory;
+  .immersive-scroll {
+    scroll-snap-type: y proximity;
     overflow-y: auto;
     height: 100vh;
     scroll-behavior: smooth;
   }
 
-  .snap-panel {
+  .immersive-section {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
     min-height: 100vh;
+  }
+
+  .scroll-progress {
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      #c41e3a,
+      #d4c4a8 45%,
+      #007a3d
+    );
+  }
+
+  .ken-burns {
+    animation: kenBurns 28s ease-in-out infinite alternate;
+  }
+
+  .grid-overlay {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black, transparent);
+  }
+
+  .saas-metric {
+    @apply rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .metric-shimmer {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 196, 168, 0.5),
+      transparent
+    );
+  }
+
+  .passage-block {
+    @apply border-l border-white/10 pl-6 md:pl-8;
+  }
+
+  .passage-marker {
+    @apply shrink-0 font-display text-sm text-champagne/80;
+    letter-spacing: 0.2em;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
   }
 
   .glass-panel {
