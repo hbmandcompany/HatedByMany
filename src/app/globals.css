@@ -167,4 +167,19 @@
   .chapter-watermark {
     user-select: none;
   }
+
+  .saas-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-champagne;
+  }
+
+  .saas-window {
+    @apply rounded-[1.75rem] border border-white/10 bg-graphite/80 backdrop-blur-xl;
+    box-shadow:
+      0 32px 100px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  }
+
+  .saas-chrome {
+    @apply bg-obsidian/60;
+  }
 }

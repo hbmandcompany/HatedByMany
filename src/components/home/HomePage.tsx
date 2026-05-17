@@ -22,6 +22,14 @@ import {
   PassageBlock,
   SectionShell,
 } from '@/components/home/ImmersivePrimitives'
+import {
+  ConsoleDashboardSection,
+  IntegrationsSection,
+  PricingSection,
+  ProductsSection,
+  SecuritySection,
+  WorkflowSection,
+} from '@/components/home/SoftwareSections'
 
 const marqueeItems = [
   'Atlas · Capital OS',
@@ -118,16 +126,23 @@ export function HomePage() {
             className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <Link
-              href="#chapter-i"
+              href="#platform"
               className="inline-flex items-center justify-center rounded-full bg-pearl px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian shadow-lux transition hover:bg-champagne"
             >
-              Begin the liturgy
+              Explore platform
+            </Link>
+            <Link
+              href="#chapter-i"
+              className="inline-flex items-center justify-center rounded-full border border-white/25 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50 hover:text-champagne"
+            >
+              Read chapters
             </Link>
             <Link
               href="/login"
-              className="inline-flex items-center justify-center rounded-full border border-white/25 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50 hover:text-champagne"
+              className="inline-flex items-center gap-2 px-4 text-xs font-semibold uppercase tracking-[0.2em] text-mist transition hover:text-champagne"
             >
               Enter console
+              <ArrowUpRight className="h-4 w-4" />
             </Link>
             <Link
               href="/learn-more"
@@ -171,6 +186,13 @@ export function HomePage() {
         </motion.a>
         <div className="vyshyvanka-border relative z-10 h-1 w-full" />
       </section>
+
+      <ConsoleDashboardSection />
+      <ProductsSection />
+      <WorkflowSection />
+      <SecuritySection />
+      <IntegrationsSection />
+      <PricingSection />
 
       {/* ——— Chapter I ——— */}
       <SectionShell

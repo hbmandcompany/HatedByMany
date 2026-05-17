@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { Cormorant_Garamond, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Header } from '@/components/Header'
 import './globals.css'
 
@@ -20,7 +21,7 @@ const sans = Outfit({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://hbm.example.com'),
+  metadataBase: new URL('https://hatedbymany.vercel.app'),
   title: {
     default: 'HBM Holdings — Luxury Software Group',
     template: '%s · HBM Holdings',
@@ -47,6 +48,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

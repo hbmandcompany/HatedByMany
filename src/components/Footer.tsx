@@ -3,72 +3,54 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { MapPin } from 'lucide-react'
-
-const footerSections = [
-  {
-    title: 'Company',
-    links: [
-      { name: 'Whitepaper', href: '/whitepaper' },
-      { name: 'Collections', href: '/collections' },
-      { name: 'Wallet', href: '/wallet' },
-    ],
-  },
-  {
-    title: 'Community',
-    links: [
-      { name: 'About Us', href: '/about-us' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'News', href: '/news' },
-    ],
-  },
-  {
-    title: 'Support',
-    links: [
-      { name: 'Customer Service', href: '/customer-service' },
-      { name: 'Legal', href: '/legal' },
-    ],
-  },
-]
+import { footerColumns, footerUtilityLinks } from '@/lib/footerLinks'
 
 export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-white/10 bg-graphite/80">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-white/10 bg-graphite/90">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            className="sm:col-span-2 lg:col-span-3 xl:col-span-1"
           >
             <div className="font-display text-2xl tracking-[0.25em] text-pearl">
               HBM
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-mist">
-              If the work invites scrutiny, we accept it. We build software for
-              teams who measure time in decades, not quarters.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist">
+              Luxury enterprise SaaS holding — Belarusian craft, biblical
+              conviction, and software built to endure audit and time.
             </p>
             <div className="mt-6 flex items-center gap-2 text-sm text-mist">
               <MapPin className="h-4 w-4 text-champagne" />
               Wyoming, USA
             </div>
+            <Link
+              href="/login"
+              className="mt-6 inline-flex rounded-full border border-white/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-pearl transition hover:border-champagne/50"
+            >
+              Console login
+            </Link>
           </motion.div>
-          {footerSections.map((section, i) => (
+
+          {footerColumns.map((section, i) => (
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.05 }}
+              transition={{ delay: i * 0.04 }}
             >
               <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-champagne">
                 {section.title}
               </h3>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-4 space-y-2.5">
                 {section.links.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.href + link.name}>
                     <Link
                       href={link.href}
                       className="text-sm text-mist transition hover:text-pearl"
@@ -81,19 +63,27 @@ export function Footer() {
             </motion.div>
           ))}
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center text-xs text-mist sm:flex-row sm:text-left">
-          <p>
-            © {year} Hated By Many Holdings. All rights reserved. Crafted with
-            precision.
+
+        <div className="mt-14 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-white/10 pt-8">
+          {footerUtilityLinks.map((link) => (
+            <Link
+              key={link.href + link.name}
+              href={link.href}
+              className="text-xs text-mist transition hover:text-pearl"
+              {...(link.href.startsWith('http')
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
+            >
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 text-center text-xs text-mist sm:flex-row sm:text-left">
+          <p>© {year} Hated By Many Holdings. All rights reserved.</p>
+          <p className="uppercase tracking-[0.2em]">
+            Crafted with precision · Vercel Analytics enabled
           </p>
-          <div className="flex gap-6">
-            <Link href="/network" className="hover:text-pearl">
-              Network
-            </Link>
-            <Link href="/solutions" className="hover:text-pearl">
-              Solutions
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
