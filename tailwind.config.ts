@@ -18,6 +18,8 @@ const config: Config = {
         'accent-pine': '#2f6f5e',
         ribbon: 'rgba(196, 92, 106, 0.35)',
         grove: 'rgba(47, 111, 94, 0.35)',
+        'belarus-red': '#c41e3a',
+        'belarus-green': '#007a3d',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

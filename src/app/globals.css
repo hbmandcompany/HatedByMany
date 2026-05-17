@@ -71,4 +71,45 @@
   .noise {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   }
+
+  .belarus-eyebrow {
+    @apply font-sans uppercase tracking-[0.35em] text-mist;
+  }
+
+  .chapter-label {
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-champagne;
+  }
+
+  .manuscript {
+    @apply font-sans font-light;
+  }
+
+  .ornament-rule {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(212, 196, 168, 0.6) 20%,
+      rgba(196, 30, 58, 0.5) 50%,
+      rgba(212, 196, 168, 0.6) 80%,
+      transparent
+    );
+  }
+
+  .vyshyvanka-border {
+    background: repeating-linear-gradient(
+      90deg,
+      #c41e3a 0,
+      #c41e3a 8px,
+      #f4f1ea 8px,
+      #f4f1ea 16px,
+      #007a3d 16px,
+      #007a3d 24px
+    );
+    opacity: 0.85;
+  }
+
+  .chapter-watermark {
+    user-select: none;
+  }
 }

@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const nav = [
-  { label: 'Ecosystem', href: '/#ecosystem' },
-  { label: 'Platform', href: '/#platform' },
-  { label: 'Network', href: '/#network' },
+  { label: 'Chapter I', href: '/#chapter-i' },
+  { label: 'Chapter II', href: '/#chapter-ii' },
+  { label: 'Chapter III', href: '/#chapter-iii' },
   { label: 'Whitepaper', href: '/whitepaper' },
 ]
 
