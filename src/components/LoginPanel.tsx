@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 export function LoginPanel() {
@@ -16,10 +15,7 @@ export function LoginPanel() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+    <div
       className="mx-auto max-w-md"
     >
       <form
@@ -60,14 +56,13 @@ export function LoginPanel() {
             className="mt-2 w-full rounded-full border border-white/15 bg-obsidian/60 px-4 py-3 text-sm text-pearl placeholder:text-mist/60 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
           />
         </div>
-        <motion.button
+        <button
           type="submit"
           disabled={loading}
-          whileTap={{ scale: 0.99 }}
-          className="w-full rounded-full bg-pearl py-3 text-sm font-semibold uppercase tracking-[0.2em] text-obsidian transition hover:bg-champagne disabled:opacity-60"
+          className="w-full rounded-full bg-pearl py-3 text-sm font-semibold uppercase tracking-[0.2em] text-obsidian transition-colors hover:bg-champagne disabled:opacity-60"
         >
           {loading ? 'Signing in…' : 'Enter console'}
-        </motion.button>
+        </button>
         <div className="space-y-3 text-center text-sm text-mist">
           <Link href="/customer-service" className="block hover:text-pearl">
             Forgot access?
@@ -80,6 +75,6 @@ export function LoginPanel() {
           </p>
         </div>
       </form>
-    </motion.div>
+    </div>
   )
 }

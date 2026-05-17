@@ -33,24 +33,6 @@ const config: Config = {
         lux: '0 24px 80px rgba(0, 0, 0, 0.45)',
         'lux-inset': 'inset 0 1px 0 rgba(255, 255, 255, 0.06)',
       },
-      animation: {
-        'fade-up': 'fadeUp 0.9s ease-out both',
-        drift: 'drift 18s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(24px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        drift: {
-          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-          '50%': { transform: 'translate(-2%, 2%) scale(1.03)' },
-        },
-        kenBurns: {
-          '0%': { transform: 'scale(1) translate(0, 0)' },
-          '100%': { transform: 'scale(1.08) translate(-1%, -1%)' },
-        },
-      },
     },
   },
   plugins: [],

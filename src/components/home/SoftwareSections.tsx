@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   Activity,
   ArrowUpRight,
@@ -17,7 +16,6 @@ import {
   Wallet,
   Zap,
 } from 'lucide-react'
-import { fade } from '@/components/home/ImmersivePrimitives'
 import {
   integrations,
   pricingTiers,
@@ -62,7 +60,7 @@ export function ConsoleDashboardSection() {
   return (
     <section id="platform" className="immersive-section bg-graphite py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
-        <motion.div {...fade} className="max-w-3xl">
+        <div className="max-w-3xl">
           <p className="saas-eyebrow">Platform · Holding Console</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
             One control plane for every collection
@@ -72,11 +70,10 @@ export function ConsoleDashboardSection() {
             single enterprise surface — designed with the density of a trading
             terminal and the calm of a private bank portal.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          {...fade}
-          transition={{ ...fade.transition, delay: 0.1 }}
+        <div
+         
           className="saas-window mt-14 overflow-hidden shadow-lux"
         >
           <WindowChrome title="HBM Holding Console · production" />
@@ -140,20 +137,17 @@ export function ConsoleDashboardSection() {
                 ))}
               </div>
 
-              <motion.div className="grid flex-1 gap-4 px-4 pb-4 sm:px-6 sm:pb-6 lg:grid-cols-5">
+              <div className="grid flex-1 gap-4 px-4 pb-4 sm:px-6 sm:pb-6 lg:grid-cols-5">
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 lg:col-span-2">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
                     API latency · 24h
                   </p>
                   <div className="mt-4 flex h-32 items-end gap-1.5">
                     {[40, 55, 48, 62, 45, 38, 52, 44, 36, 42, 50, 35].map((h, i) => (
-                      <motion.div
+                      <div
                         key={i}
-                        initial={{ height: 0 }}
-                        whileInView={{ height: `${h}%` }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.04, duration: 0.5 }}
-                        className="flex-1 rounded-t bg-gradient-to-t from-champagne/20 to-champagne/70"
+                        style={{ height: `${h}%` }}
+                        className="flex-1 rounded-t bg-champagne/50"
                       />
                     ))}
                   </div>
@@ -199,12 +193,12 @@ export function ConsoleDashboardSection() {
                     </tbody>
                   </table>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div {...fade} className="mt-8 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/login"
             className="inline-flex items-center gap-2 rounded-full bg-pearl px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-obsidian hover:bg-champagne"
@@ -219,7 +213,7 @@ export function ConsoleDashboardSection() {
             View collections docs
             <ChevronRight className="h-4 w-4" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -229,7 +223,7 @@ export function ProductsSection() {
   return (
     <section id="products" className="immersive-section bg-obsidian py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
-        <motion.div {...fade} className="text-center">
+        <div className="text-center">
           <p className="saas-eyebrow">Product suite</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
             Three collections. One design language.
@@ -238,16 +232,12 @@ export function ProductsSection() {
             Atlas, Meridian, and Nocturne share tokens, telemetry, and SSO — while
             keeping data planes sovereign where regulation demands.
           </p>
-        </motion.div>
+        </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {productCollections.map((product, i) => (
-            <motion.article
+          {productCollections.map((product) => (
+            <article
               key={product.id}
-              initial={{ opacity: 0, y: 28 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.7 }}
               className="saas-window flex flex-col overflow-hidden"
             >
               <div className={`bg-gradient-to-b ${product.accent} p-6`}>
@@ -293,7 +283,7 @@ export function ProductsSection() {
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>
@@ -305,7 +295,7 @@ export function WorkflowSection() {
   return (
     <section id="workflows" className="immersive-section bg-gradient-to-b from-graphite to-obsidian py-24 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2 lg:items-center sm:px-10">
-        <motion.div {...fade}>
+        <div>
           <p className="saas-eyebrow">Implementation</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
             From provision to audit in four movements
@@ -326,9 +316,9 @@ export function WorkflowSection() {
               </li>
             ))}
           </ol>
-        </motion.div>
+        </div>
 
-        <motion.div {...fade} className="saas-window overflow-hidden">
+        <div className="saas-window overflow-hidden">
           <WindowChrome title="Deployment pipeline · Atlas" />
           <div className="space-y-3 p-6">
             {[
@@ -366,7 +356,7 @@ export function WorkflowSection() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -383,8 +373,8 @@ export function SecuritySection() {
 
   return (
     <section id="security" className="immersive-section bg-obsidian py-24 lg:py-32">
-      <motion.div className="mx-auto max-w-6xl px-6 sm:px-10">
-        <motion.div {...fade} className="mx-auto max-w-3xl text-center">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
+        <div className="mx-auto max-w-3xl text-center">
           <p className="saas-eyebrow">Security & compliance</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
             Trust engineered into every layer
@@ -393,10 +383,10 @@ export function SecuritySection() {
             SOC 2 Type II, regional residency, and signer ceremonies — surfaced in
             a compliance center your auditors will actually use.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          {...fade}
+        <div
+         
           className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]"
         >
           <div className="space-y-4">
@@ -447,8 +437,8 @@ export function SecuritySection() {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   )
 }
@@ -457,14 +447,14 @@ export function IntegrationsSection() {
   return (
     <section id="integrations" className="immersive-section border-y border-white/10 bg-graphite py-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
-        <motion.div {...fade} className="text-center">
+        <div className="text-center">
           <p className="saas-eyebrow">Integrations</p>
           <h2 className="mt-4 font-display text-3xl text-pearl md:text-4xl">
             Connects to the stack you already run
           </h2>
-        </motion.div>
-        <motion.div
-          {...fade}
+        </div>
+        <div
+         
           className="mt-12 flex flex-wrap justify-center gap-3"
         >
           {integrations.map((name) => (
@@ -475,8 +465,8 @@ export function IntegrationsSection() {
               {name}
             </span>
           ))}
-        </motion.div>
-        <motion.div {...fade} className="saas-window mt-12 overflow-hidden">
+        </div>
+        <div className="saas-window mt-12 overflow-hidden">
           <WindowChrome title="REST API · /v1/tenants" />
           <pre className="overflow-x-auto p-6 font-mono text-xs leading-relaxed text-mist">
 {`GET /v1/tenants/hbm-atlas-na
@@ -491,7 +481,7 @@ X-Region: iad1
   "signers_online": 142
 }`}
           </pre>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -501,7 +491,7 @@ export function PricingSection() {
   return (
     <section id="pricing" className="immersive-section bg-obsidian py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
-        <motion.div {...fade} className="text-center">
+        <div className="text-center">
           <p className="saas-eyebrow">Commercial</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
             Enterprise pricing, quoted with integrity
@@ -510,16 +500,12 @@ export function PricingSection() {
             No surprise overages on human dignity. Every tier includes evidence
             exports, SSO, and regional residency — scoped to your charter.
           </p>
-        </motion.div>
+        </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {pricingTiers.map((tier, i) => (
-            <motion.article
+          {pricingTiers.map((tier) => (
+            <article
               key={tier.name}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
               className={`rounded-[2rem] border p-8 ${
                 tier.highlighted
                   ? 'border-champagne/40 bg-gradient-to-b from-champagne/10 to-transparent shadow-lux'
@@ -547,7 +533,7 @@ export function PricingSection() {
               >
                 Request quote
               </Link>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

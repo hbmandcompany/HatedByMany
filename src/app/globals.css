@@ -30,11 +30,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      180deg,
-      rgba(212, 196, 168, 0.5),
-      rgba(154, 163, 178, 0.35)
-    );
+    background: rgba(154, 163, 178, 0.4);
     border-radius: 999px;
   }
 }
@@ -52,20 +48,6 @@
     min-height: 100vh;
   }
 
-  .scroll-progress {
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      #c41e3a,
-      #d4c4a8 45%,
-      #007a3d
-    );
-  }
-
-  .ken-burns {
-    animation: kenBurns 28s ease-in-out infinite alternate;
-  }
-
   .grid-overlay {
     background-image:
       linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -79,16 +61,6 @@
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 
-  .metric-shimmer {
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(212, 196, 168, 0.5),
-      transparent
-    );
-  }
-
   .passage-block {
     @apply border-l border-white/10 pl-6 md:pl-8;
   }
@@ -98,29 +70,11 @@
     letter-spacing: 0.2em;
   }
 
-  .marquee-mask {
-    mask-image: linear-gradient(
-      90deg,
-      transparent,
-      black 12%,
-      black 88%,
-      transparent
-    );
-  }
-
   .glass-panel {
     @apply rounded-[1.75rem] border border-white/10 bg-white/[0.04] shadow-lux backdrop-blur-xl;
     box-shadow:
       0 24px 80px rgba(0, 0, 0, 0.45),
       inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  }
-
-  .orb {
-    position: absolute;
-    border-radius: 999px;
-    filter: blur(80px);
-    opacity: 0.45;
-    pointer-events: none;
   }
 
   .noise {
@@ -137,31 +91,6 @@
 
   .manuscript {
     @apply font-sans font-light;
-  }
-
-  .ornament-rule {
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(212, 196, 168, 0.6) 20%,
-      rgba(196, 30, 58, 0.5) 50%,
-      rgba(212, 196, 168, 0.6) 80%,
-      transparent
-    );
-  }
-
-  .vyshyvanka-border {
-    background: repeating-linear-gradient(
-      90deg,
-      #c41e3a 0,
-      #c41e3a 8px,
-      #f4f1ea 8px,
-      #f4f1ea 16px,
-      #007a3d 16px,
-      #007a3d 24px
-    );
-    opacity: 0.85;
   }
 
   .chapter-watermark {
