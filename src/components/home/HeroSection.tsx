@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { NightSkyBackground } from '@/components/home/NightSkyBackground'
 
 const scriptureVerses = [
-  'If ye were of the world, the world would love his own: but because ye are not of the world… therefore the world hateth you.',
-  'He that hateth me hateth my Father also.',
-  'They hated me without a cause.',
+  'If you belonged to the world, it would love you as its own. Because you do not belong to the world, but I chose you out of it, the world hates you.',
+  'Whoever hates me hates my Father as well.',
+  'They hated me without reason.',
 ]
 
 export function HeroSection() {
@@ -31,35 +31,35 @@ export function HeroSection() {
           <span className="hidden h-px w-12 bg-belarus-red/50 sm:block" />
         </div>
 
-        <div className="mt-8 lg:mt-10">
+        <div className="mt-6 lg:mt-8">
           <p className="font-display text-sm uppercase tracking-[0.45em] text-champagne">
             Hated By Many Holdings
           </p>
-          <h1 className="mt-5 font-display text-[clamp(2.75rem,9vw,5.5rem)] leading-[0.95] tracking-tight text-parchment">
+          <h1 className="mt-3 font-display text-[clamp(2.75rem,9vw,5.5rem)] leading-[0.95] tracking-tight text-parchment">
             Hated By Many.
           </h1>
-          <p className="mt-3 font-display text-[clamp(1.5rem,3.5vw,2.25rem)] italic leading-tight text-pearl">
+          <p className="mt-2 font-display text-[clamp(1.5rem,3.5vw,2.25rem)] italic leading-tight text-pearl">
             For My names sake
           </p>
         </div>
 
-        <blockquote className="glass-panel mx-auto mt-10 max-w-2xl border-l-2 border-belarus-red/50 px-8 py-8 text-center sm:px-10">
+        <blockquote className="glass-panel mx-auto mt-8 max-w-2xl border-l-2 border-belarus-red/50 px-8 py-6 text-center sm:px-10">
           <p className="text-xs font-semibold uppercase tracking-[0.35em] text-belarus-red/90">
             John 15:18–25
           </p>
-          <p className="manuscript mt-6 text-lg italic leading-relaxed text-champagne/90 md:text-xl">
-            &ldquo;If the world hate you, ye know that it hated me before it hated you.&rdquo;
+          <p className="manuscript mt-4 text-lg italic leading-snug text-champagne/90 md:text-xl">
+            &ldquo;If the world hates you, keep in mind that it hated me first.&rdquo;
           </p>
-          <div className="mt-6 space-y-4">
+          <div className="mt-3 space-y-2">
             {scriptureVerses.map((verse) => (
-              <p key={verse} className="manuscript text-base leading-[1.85] text-pearl md:text-lg">
+              <p key={verse} className="manuscript text-base leading-snug text-pearl md:text-lg">
                 {verse}
               </p>
             ))}
           </div>
         </blockquote>
 
-        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
           <Link
             href="/about-us"
             className="inline-flex items-center justify-center rounded-full bg-frost px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian shadow-lux transition hover:bg-parchment"

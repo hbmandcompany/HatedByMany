@@ -22,15 +22,12 @@ const sans = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hatedbymany.vercel.app'),
-  title: {
-    default: 'HBM Holdings — Luxury Software Group',
-    template: '%s · HBM Holdings',
-  },
+  title: 'Hated By Many',
   description:
     'Hated By Many Holdings builds sovereign enterprise SaaS, capital infrastructure, and creator platforms — composed as a single luxury software group.',
   icons: { icon: '/fav.png' },
   openGraph: {
-    title: 'HBM Holdings — Luxury Software Group',
+    title: 'Hated By Many',
     description:
       'A luxury software holding company for enterprises that require calm, precision, and durable systems.',
     type: 'website',
