@@ -1,10 +1,3 @@
-export const heroMetrics = [
-  { label: 'Platform uptime', value: '99.97%', detail: 'Trailing twelve months' },
-  { label: 'Enterprise tenants', value: '240+', detail: 'Across 11 regions' },
-  { label: 'Median API latency', value: '312ms', detail: 'Global edge mesh' },
-  { label: 'Audit pass rate', value: '100%', detail: 'SOC 2 Type II cycles' },
-]
-
 export const gospelPassages = [
   {
     marker: 'I.i',

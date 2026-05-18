@@ -1,20 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRef } from 'react'
-import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { Footer } from '@/components/Footer'
-import {
-  covenantTenets,
-  gospelPassages,
-  heroMetrics,
-} from '@/lib/homeContent'
-import {
-  MetricCard,
-  PassageBlock,
-  SectionShell,
-} from '@/components/home/ImmersivePrimitives'
+import { covenantTenets, gospelPassages } from '@/lib/homeContent'
+import { PassageBlock, SectionShell } from '@/components/home/ImmersivePrimitives'
+import { HeroSection } from '@/components/home/HeroSection'
 import {
   ConsoleDashboardSection,
   IntegrationsSection,
@@ -34,111 +25,7 @@ export function HomePage() {
       ref={rootRef}
       className="immersive-scroll noise text-pearl"
     >
-      {/* ——— Hero ——— */}
-      <section
-        id="hero"
-        className="relative flex min-h-screen flex-col justify-end overflow-hidden"
-      >
-        <div className="absolute inset-0">
-          <Image
-            src="/smartwatch-hero.jpg"
-            alt=""
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-        </div>
-        <div className="absolute inset-0 bg-obsidian/88" />
-        <div className="grid-overlay pointer-events-none absolute inset-0" />
-
-        <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-6 pb-16 pt-32 sm:px-10 lg:pb-24 lg:pt-40">
-          <p
-            className="belarus-eyebrow text-[0.65rem] sm:text-xs"
-          >
-            <span className="text-belarus-red">●</span> Мінск · Вільня · Нью-Ёрк
-            <span className="mx-3 text-white/20">|</span>
-            Enterprise SaaS holding · Est. MMXX
-          </p>
-
-          <div
-            className="mt-10 max-w-5xl"
-          >
-            <h1 className="font-display text-[clamp(2.85rem,9vw,6rem)] leading-[0.98] tracking-tight text-parchment">
-              hated
-              <span className="text-champagne"> by many.</span>
-              <br />
-              <span className="italic text-pearl">faithful to One.</span>
-            </h1>
-            <div className="mt-10 h-px w-32 bg-graphite/15" />
-            <p className="manuscript mt-10 max-w-3xl text-lg leading-[1.9] text-mist md:text-xl">
-              Hated By Many Holdings is a luxury software atelier — Belarusian
-              discipline, biblical conviction, and enterprise rigor composed into
-              a single portfolio operating system. We underwrite platforms for
-              capital markets, regulated desks, and creator economies that must
-              remain legible under audit, elegant under pressure, and durable
-              beyond the tenure of any single team.
-            </p>
-            <p className="manuscript mt-6 max-w-3xl text-base leading-[1.85] text-mist/90">
-              This is not marketing copy set atop a generic dashboard. It is the
-              public face of a covenant: we build as stewards, document as
-              witnesses, and ship as artisans who believe excellence is an act of
-              worship — slow where wisdom demands, swift where mercy requires.
-            </p>
-          </div>
-
-          <div
-            className="mt-12 flex flex-col gap-4 sm:flex-row sm:items-center"
-          >
-            <Link
-              href="#platform"
-              className="inline-flex items-center justify-center rounded-full bg-frost px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian shadow-lux transition hover:bg-parchment"
-            >
-              Explore platform
-            </Link>
-            <Link
-              href="#chapter-i"
-              className="inline-flex items-center justify-center rounded-full border border-stone/25 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50 hover:text-champagne"
-            >
-              Read chapters
-            </Link>
-            <Link
-              href="/login"
-              className="inline-flex items-center gap-2 px-4 text-xs font-semibold uppercase tracking-[0.2em] text-mist transition hover:text-champagne"
-            >
-              Enter console
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/learn-more"
-              className="inline-flex items-center gap-2 px-4 text-xs font-semibold uppercase tracking-[0.2em] text-mist transition hover:text-champagne"
-            >
-              Diligence kit
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div
-            className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {heroMetrics.map((m) => (
-              <div
-                key={m.label}
-              >
-                <MetricCard {...m} />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <a
-          href="#platform"
-          className="absolute bottom-8 right-8 z-20 hidden flex-col items-center gap-2 text-[0.65rem] uppercase tracking-[0.35em] text-mist transition-colors hover:text-champagne md:flex"
-        >
-          Scroll
-          <ArrowDown className="h-4 w-4" />
-        </a>
-      </section>
+      <HeroSection />
 
       <ConsoleDashboardSection />
       <ProductsSection />
