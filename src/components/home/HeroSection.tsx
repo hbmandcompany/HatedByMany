@@ -33,7 +33,7 @@ export function HeroSection() {
 
         <div className="mt-6 lg:mt-8">
           <p className="font-display text-sm uppercase tracking-[0.45em] text-champagne">
-            Hated By Many Holdings
+            Formerly Of This Life
           </p>
           <h1 className="mt-3 font-display text-[clamp(2.75rem,9vw,5.5rem)] leading-[0.95] tracking-tight text-parchment">
             Hated By Many.

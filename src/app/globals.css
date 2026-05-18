@@ -114,6 +114,14 @@
     @apply text-xs font-semibold uppercase tracking-[0.35em] text-champagne;
   }
 
+  .newsprint-page {
+    background: #f4f1ea;
+    color: #1a1a1a;
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.45),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  }
+
   .saas-window {
     @apply rounded-[1.75rem] border border-stone/15 bg-graphite/95;
     box-shadow:
