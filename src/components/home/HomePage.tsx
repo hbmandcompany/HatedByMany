@@ -219,20 +219,7 @@ export function HomePage() {
                   </p>
                 </div>
               </div>
-              <div
-               
-                className="mt-6 glass-panel p-6 text-sm leading-relaxed text-mist"
-              >
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-champagne">
-                  Internal charter · excerpt
-                </p>
-                <p className="manuscript mt-3">
-                  Employees, contractors, and partners are expected to treat
-                  customers, data, and one another with the gravity Scripture
-                  assigns to bearing God&apos;s name — not as a HR policy, but
-                  as a design constraint on how we ship.
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>

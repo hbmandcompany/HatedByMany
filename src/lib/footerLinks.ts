@@ -46,7 +46,7 @@ export const footerColumns: FooterColumn[] = [
     title: 'Chapters',
     links: [
       { name: 'Chapter I · The Gospel', href: '/#chapter-i' },
-      { name: 'Chapter II · Staking Tiers', href: '/#staking-participant' },
+      { name: 'Chapter II · Staking Tiers', href: '/#chapter-ii' },
       { name: 'Chapter III · The Covenant', href: '/#chapter-iii' },
     ],
   },
