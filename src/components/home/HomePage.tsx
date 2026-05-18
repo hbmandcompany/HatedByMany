@@ -27,13 +27,6 @@ export function HomePage() {
     >
       <HeroSection />
 
-      <ConsoleDashboardSection />
-      <ProductsSection />
-      <WorkflowSection />
-      <SecuritySection />
-      <IntegrationsSection />
-      <PricingSection />
-
       {/* ——— Chapter I ——— */}
       <SectionShell
         id="chapter-i"
@@ -111,6 +104,13 @@ export function HomePage() {
           </div>
         </div>
       </SectionShell>
+
+      <ConsoleDashboardSection />
+      <ProductsSection />
+      <WorkflowSection />
+      <SecuritySection />
+      <IntegrationsSection />
+      <PricingSection />
 
       <StakingTiersSection />
 
