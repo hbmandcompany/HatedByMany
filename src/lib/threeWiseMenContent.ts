@@ -11,60 +11,66 @@ export type WiseMenProduct = {
 
 export const threeWiseMenProducts: WiseMenProduct[] = [
   {
-    id: 'play',
-    name: 'The Table',
-    tagline: 'Core game · threewisemen.cc',
+    id: 'gifting',
+    name: 'Gifting',
+    tagline: 'USDC on Base · threewisemen.cc',
     description:
-      'Three-player provably fair 3-card poker on Base. You see every opponent\'s hand — not your own. One betting round, then showdown. Real USDC antes and pots.',
-    stats: [
-      { label: 'Players', value: '3' },
-      { label: 'House rake', value: '5%' },
-      { label: 'Settlement', value: 'Instant' },
-    ],
-    highlights: [
-      'Hole cards hidden from self, visible to others',
-      'Micro to Whale stakes tiers ($0.25 – $100+ ante)',
-      '60s action timer · check, bet, fold, call, raise',
-    ],
-    href: 'https://threewisemen.cc/play/poker',
-    cta: 'Play poker',
-  },
-  {
-    id: 'prove',
-    name: 'Fairness Registry',
-    tagline: 'On-chain proof · Base L2',
-    description:
-      'Every hand commits a seed hash before deal; the seed is revealed after settlement. Reconstruct the deck in-browser and verify the on-chain commitment.',
-    stats: [
-      { label: 'RNG', value: 'VRF + SHA-256' },
-      { label: 'Shuffle', value: 'Fisher-Yates' },
-      { label: 'Audit', value: 'Post-hand' },
-    ],
-    highlights: [
-      'FairnessRegistry contract stores commitments',
-      'Verify This Game modal on every settled pot',
-      'Impossible to alter deck after bets are placed',
-    ],
-    href: 'https://threewisemen.cc/play/poker',
-    cta: 'Verify a hand',
-  },
-  {
-    id: 'vault',
-    name: 'GameVault',
-    tagline: 'USDC treasury · Wyoming LLC',
-    description:
-      'Deposits, antes, and payouts flow through GameVault on Base — operated by Hated By Many LLC. Non-custodial wallet via Coinbase; balances settle on-chain immediately.',
+      'Send crypto gifts directly to creators, influencers, or friends. Every gift is timestamped on-chain — permanent, public, and verifiable. Recipients keep 95%; the protocol retains 5%.',
     stats: [
       { label: 'Asset', value: 'USDC' },
-      { label: 'Chain', value: 'Base' },
-      { label: 'Operator', value: 'HBM LLC' },
+      { label: 'Platform fee', value: '5%' },
+      { label: 'Recipient', value: '95%' },
     ],
     highlights: [
-      'Deposit · post ante · bet · fold · settle in one session',
-      'Matchmaking by skill tier and stakes table',
-      'Responsible gambling limits and self-exclusion',
+      'Direct wallet-to-wallet gifts via Coinbase embedded wallet',
+      'On-chain record visible to the entire community',
+      'Creators set their own receiver address — no extraction',
     ],
-    href: '/wallet',
-    cta: 'Treasury docs',
+    href: 'https://threewisemen.cc',
+    cta: 'Send a gift',
+  },
+  {
+    id: 'levels',
+    name: 'NFT Levels',
+    tagline: 'Achievement tiers · Base L2',
+    description:
+      'Cumulative gifting unlocks minted achievement NFTs — Admirer through Wise Man. Each level grants badges, leaderboard placement, and exclusive gift tiers.',
+    stats: [
+      { label: 'Levels', value: '5' },
+      { label: 'Top tier', value: '$10k' },
+      { label: 'Proof', value: 'NFT' },
+    ],
+    highlights: [
+      'Level 1 Admirer · $10 · Level 5 Wise Man · $10,000 lifetime',
+      'Profile badges, frames, and top-supporter leaderboards',
+      'Tradeable NFTs — portable proof of generosity',
+    ],
+    href: 'https://threewisemen.cc',
+    cta: 'View levels',
+  },
+  {
+    id: 'network',
+    name: 'Network Effect',
+    tagline: 'Creators · Givers · Protocol',
+    description:
+      'The three wise men bearing gifts — giving as virtue, recognition of the giver, public generosity. Creators earn ongoing USDC; givers compete for status; the protocol scales on volume.',
+    stats: [
+      { label: 'Chain', value: 'Base' },
+      { label: 'Operator', value: 'HBM LLC' },
+      { label: 'Model', value: 'Social' },
+    ],
+    highlights: [
+      'Public gifting leaderboards for creators and charities',
+      'Gamified levels drive ongoing engagement and bragging rights',
+      '5% fee + optional mint premiums; creators keep the majority',
+    ],
+    href: '/whitepaper',
+    cta: 'Read spec',
   },
 ]
+
+export const threeWiseMenIntro = {
+  eyebrow: 'Three Wise Men · Base L2',
+  title: 'Crypto-backed gifting with NFT levels',
+  body: 'A social gifting platform on Base where users send USDC to creators and friends. Every gift is on-chain and public. Gift more — unlock NFT achievement tiers from Admirer to Wise Man.',
+}

@@ -10,9 +10,9 @@ export const footerColumns: FooterColumn[] = [
     title: 'Platform',
     links: [
       { name: 'Holding Console', href: '/#platform' },
-      { name: 'The Table · Play', href: 'https://threewisemen.cc/play/poker' },
-      { name: 'Fairness Registry', href: '/#products' },
-      { name: 'GameVault · USDC', href: '/wallet' },
+      { name: 'Gifting · USDC', href: 'https://threewisemen.cc' },
+      { name: 'NFT Levels', href: '/#products' },
+      { name: 'Network · Protocol', href: '/whitepaper' },
       { name: 'Solutions', href: '/solutions' },
       { name: 'Network Topology', href: '/network' },
       { name: 'Collections', href: '/collections' },

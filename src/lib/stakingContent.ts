@@ -42,7 +42,7 @@ export const stakingTiers: StakingTier[] = [
     ],
     returns: [
       { label: 'Base yield (illustrative)', value: '4.2% APY', note: 'protocol revenue share' },
-      { label: 'Rake rebate', value: '0.25%', note: 'on Three Wise Men volume' },
+      { label: 'Gift fee share', value: '0.25%', note: 'on protocol gift volume' },
       { label: 'Expected 12-mo. return', value: '4.8 – 6.1%', note: 'net of variance' },
     ],
     rights: [
@@ -71,11 +71,11 @@ export const stakingTiers: StakingTier[] = [
     ],
     returns: [
       { label: 'Base yield (illustrative)', value: '5.8% APY', note: 'revenue + rake pool' },
-      { label: 'Rake rebate', value: '0.75%', note: 'volume tiered' },
+      { label: 'Gift fee share', value: '0.75%', note: 'volume tiered' },
       { label: 'Expected 12-mo. return', value: '7.2 – 9.4%', note: 'risk-adjusted band' },
     ],
     rights: [
-      'Weighted vote on Atlas / Meridian / Nocturne capital calls',
+      'Weighted vote on treasury releases and NFT level policy',
       'Co-sign multi-sig releases with Tier III on constitutional changes',
       'Priority access to diligence rooms and whitepaper annexes',
     ],
@@ -100,7 +100,7 @@ export const stakingTiers: StakingTier[] = [
     ],
     returns: [
       { label: 'Base yield (illustrative)', value: '7.1% APY', note: 'full revenue stack' },
-      { label: 'Rake rebate', value: '1.25%', note: 'plus house edge participation' },
+      { label: 'Gift fee share', value: '1.25%', note: 'plus protocol revenue pool' },
       { label: 'Expected 12-mo. return', value: '9.8 – 12.6%', note: 'allocator band' },
     ],
     rights: [
