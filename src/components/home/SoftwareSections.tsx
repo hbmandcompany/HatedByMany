@@ -41,7 +41,7 @@ export function ConsoleDashboardSection() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-5xl origin-top scale-[0.88] sm:scale-[0.92] lg:max-w-[52rem]">
+        <div className="mt-8">
           <HoldingConsole />
         </div>
 
