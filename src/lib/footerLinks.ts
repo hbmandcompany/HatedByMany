@@ -10,9 +10,9 @@ export const footerColumns: FooterColumn[] = [
     title: 'Platform',
     links: [
       { name: 'Holding Console', href: '/#platform' },
-      { name: 'Atlas · Capital OS', href: '/#products' },
-      { name: 'Meridian · Revenue', href: '/#products' },
-      { name: 'Nocturne · Creator Mesh', href: '/#products' },
+      { name: 'The Table · Play', href: 'https://threewisemen.cc/play/poker' },
+      { name: 'Fairness Registry', href: '/#products' },
+      { name: 'GameVault · USDC', href: '/wallet' },
       { name: 'Solutions', href: '/solutions' },
       { name: 'Network Topology', href: '/network' },
       { name: 'Collections', href: '/collections' },
@@ -46,7 +46,7 @@ export const footerColumns: FooterColumn[] = [
     title: 'Chapters',
     links: [
       { name: 'Chapter I · The Gospel', href: '/#chapter-i' },
-      { name: 'Chapter II · Our Services', href: '/#chapter-ii' },
+      { name: 'Chapter II · Staking Tiers', href: '/#staking-participant' },
       { name: 'Chapter III · The Covenant', href: '/#chapter-iii' },
     ],
   },

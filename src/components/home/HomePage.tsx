@@ -3,19 +3,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
-import { ArrowDown, ArrowUpRight, Check } from 'lucide-react'
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { Footer } from '@/components/Footer'
 import {
   covenantTenets,
   gospelPassages,
   heroMetrics,
-  platformPillars,
-  services,
-  trustSignals,
 } from '@/lib/homeContent'
 import {
   MetricCard,
-  ParallaxImage,
   PassageBlock,
   SectionShell,
 } from '@/components/home/ImmersivePrimitives'
@@ -27,6 +23,7 @@ import {
   SecuritySection,
   WorkflowSection,
 } from '@/components/home/SoftwareSections'
+import { StakingTiersSection } from '@/components/home/StakingTiersSection'
 
 export function HomePage() {
   const rootRef = useRef<HTMLDivElement>(null)
@@ -154,10 +151,11 @@ export function HomePage() {
       <SectionShell
         id="chapter-i"
         watermark="I"
+        compact
         className="bg-obsidian"
       >
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
+        <div className="relative z-10 mx-auto max-w-6xl px-6 py-20 sm:px-10 lg:py-24">
           <div className="max-w-4xl">
             <p className="chapter-label">Раздзел I · Chapter I</p>
             <h2 className="mt-5 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-tight">
@@ -240,130 +238,14 @@ export function HomePage() {
         </div>
       </SectionShell>
 
-      {/* ——— Chapter II ——— */}
-      <SectionShell id="chapter-ii" watermark="II" className="overflow-hidden">
-        <ParallaxImage
-          src="/phonelines.jpeg"
-          alt=""
-          className="absolute inset-0"
-          overlay="from-obsidian/95 via-obsidian/88 to-obsidian"
-        />
-        <div className="grid-overlay pointer-events-none absolute inset-0 opacity-30" />
-
-        <div className="relative z-10 mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="chapter-label">Раздзел II · Chapter II</p>
-            <h2 className="mt-5 font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-tight">
-              Our Services to
-              <span className="text-champagne"> our Savior</span>
-            </h2>
-            <p className="manuscript mt-8 text-lg leading-[1.9] text-mist md:text-xl">
-              We are a software house — yet we do not worship the machine. What
-              we offer below is incense: enterprise platforms, capital rails, and
-              publishing meshes described in the language of diligence rooms,
-              framed by the fear of the Lord and the love of neighbor.
-            </p>
-            <p className="manuscript mt-6 text-base leading-[1.85] text-mist/90">
-              Engagements begin with architecture, not aesthetics — though our
-              aesthetics are deliberate. We partner with founders, CIOs, and
-              allocators who treat software as fiduciary infrastructure: latency
-              matters because people wait; clarity matters because auditors read;
-              beauty matters because humans deserve dignity in every click.
-            </p>
-          </div>
-
-          <div className="mt-20 space-y-8">
-            {services.map((item) => (
-              <article
-                key={item.id}
-                className="glass-panel overflow-hidden rounded-[2rem]"
-              >
-                <div className="h-px bg-white/10" />
-                <div className="grid gap-8 p-8 md:grid-cols-[1fr_auto] md:p-10 lg:grid-cols-[1.2fr_0.8fr_auto] lg:gap-12">
-                  <div>
-                    <p className="text-xs italic leading-relaxed text-champagne/90">
-                      {item.verse}
-                    </p>
-                    <h3 className="mt-4 font-display text-3xl text-pearl md:text-4xl">
-                      {item.title}
-                    </h3>
-                    <p className="manuscript mt-5 text-base leading-[1.85] text-mist md:text-lg">
-                      {item.summary}
-                    </p>
-                    <ul className="mt-8 space-y-3">
-                      {item.capabilities.map((cap) => (
-                        <li
-                          key={cap}
-                          className="flex gap-3 text-sm leading-relaxed text-mist"
-                        >
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent-pine" />
-                          {cap}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="hidden lg:block">
-                    <div className="h-full w-px bg-gradient-to-b from-transparent via-white/15 to-transparent" />
-                  </div>
-                  <div className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:min-w-[12rem]">
-                    <div>
-                      <p className="text-[0.65rem] uppercase tracking-[0.28em] text-mist">
-                        {item.metric.label}
-                      </p>
-                      <p className="mt-2 font-display text-4xl text-pearl">
-                        {item.metric.value}
-                      </p>
-                    </div>
-                    <Link
-                      href="/solutions"
-                      className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-champagne hover:text-pearl"
-                    >
-                      Briefing
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-24">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.35em] text-champagne">
-              Platform pillars
-            </p>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2">
-              {platformPillars.map((pillar) => (
-                <div
-                  key={pillar.title}
-                  className="rounded-3xl border border-white/10 bg-white/[0.03] p-7"
-                >
-                  <h4 className="font-display text-xl text-pearl">{pillar.title}</h4>
-                  <p className="manuscript mt-3 text-sm leading-[1.8] text-mist">
-                    {pillar.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <p
-           
-            className="manuscript mx-auto mt-16 max-w-3xl text-center text-base leading-[1.9] text-mist md:text-lg"
-          >
-            Like the tabernacle artisans of old, we measure twice and ship once.
-            Atlas governs capital operations; Meridian, editorial revenue;
-            Nocturne, creator-owned distribution — collections united by one
-            design language, divided only where sovereignty and residency
-            demand. Request a briefing; we answer as servants, not sovereigns.
-          </p>
-        </div>
-      </SectionShell>
+      <StakingTiersSection />
 
       {/* ——— Chapter III ——— */}
       <SectionShell
         id="chapter-iii"
         watermark="III"
-        className="flex flex-col bg-gradient-to-b from-graphite via-obsidian to-obsidian"
+        compact
+        className="bg-gradient-to-b from-graphite via-obsidian to-obsidian pb-16"
       >
 
         <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-24 sm:px-10 lg:py-32">
@@ -397,66 +279,10 @@ export function HomePage() {
               </li>
             ))}
           </ul>
-
-          <div className="mt-16">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.35em] text-mist">
-              Trust & compliance surface
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {trustSignals.map((signal) => (
-                <span
-                  key={signal}
-                  className="rounded-full border border-white/15 bg-white/[0.04] px-5 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-mist"
-                >
-                  {signal}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <blockquote
-           
-            className="mx-auto mt-16 max-w-3xl text-center"
-          >
-            <p className="font-display text-2xl italic leading-snug text-pearl/95 md:text-4xl">
-              Let every deployment be an act of obedience — software that
-              outlives its makers because it was built in fear of the Lord and
-              love of neighbor.
-            </p>
-          </blockquote>
-
-          <div
-           
-            className="mt-14 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <Link
-              href="/learn-more"
-              className="inline-flex items-center justify-center rounded-full bg-pearl px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian transition hover:bg-champagne"
-            >
-              Request briefing
-            </Link>
-            <Link
-              href="/download"
-              className="inline-flex items-center justify-center rounded-full border border-white/20 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50"
-            >
-              Client downloads
-            </Link>
-            <Link
-              href="/whitepaper"
-              className="inline-flex items-center gap-2 px-4 text-xs font-semibold uppercase tracking-[0.2em] text-champagne hover:text-pearl"
-            >
-              Read whitepaper
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <p className="mt-12 text-center text-xs uppercase tracking-[0.35em] text-mist">
-            Hated By Many Holdings · Wyoming, USA
-          </p>
         </div>
-
-        <Footer />
       </SectionShell>
+
+      <Footer />
     </div>
   )
 }

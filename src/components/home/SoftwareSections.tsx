@@ -19,9 +19,9 @@ import {
 import {
   integrations,
   pricingTiers,
-  productCollections,
   workflowSteps,
 } from '@/lib/productContent'
+import { threeWiseMenProducts } from '@/lib/threeWiseMenContent'
 
 function WindowChrome({ title }: { title: string }) {
   return (
@@ -224,62 +224,59 @@ export function ProductsSection() {
     <section id="products" className="immersive-section bg-obsidian py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="text-center">
-          <p className="saas-eyebrow">Product suite</p>
+          <p className="saas-eyebrow">Three Wise Men · Base L2</p>
           <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
-            Three collections. One design language.
+            Old West poker. Real USDC.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-mist">
-            Atlas, Meridian, and Nocturne share tokens, telemetry, and SSO — while
-            keeping data planes sovereign where regulation demands.
+            Three players, three cards, one pot — provably fair on Base. See every
+            opponent&apos;s hand, not your own. Operated by Hated By Many LLC
+            (Wyoming).
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {productCollections.map((product) => (
+          {threeWiseMenProducts.map((product) => (
             <article
               key={product.id}
               className="saas-window flex flex-col overflow-hidden"
             >
-              <div className={`bg-gradient-to-b ${product.accent} p-6`}>
+              <div className="bg-gradient-to-b from-champagne/10 to-transparent p-6">
                 <p className="text-xs uppercase tracking-[0.25em] text-champagne">
                   {product.tagline}
                 </p>
                 <h3 className="mt-2 font-display text-3xl text-pearl">{product.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-mist">{product.description}</p>
               </div>
-              <div className="flex flex-wrap gap-2 border-b border-white/10 px-4 py-3">
-                {product.nav.map((tab, j) => (
-                  <span
-                    key={tab}
-                    className={`rounded-lg px-3 py-1 text-xs ${
-                      j === 0
-                        ? 'bg-white/[0.08] text-pearl'
-                        : 'text-mist'
-                    }`}
-                  >
-                    {tab}
-                  </span>
+              <ul className="space-y-2 border-b border-white/10 px-4 py-4">
+                {product.highlights.map((line) => (
+                  <li key={line} className="text-xs leading-relaxed text-mist">
+                    · {line}
+                  </li>
                 ))}
-              </div>
-              <div className="grid grid-cols-2 gap-3 p-4">
+              </ul>
+              <div className="grid grid-cols-3 gap-2 p-4">
                 {product.stats.map((stat) => (
                   <div
                     key={stat.label}
                     className="rounded-xl border border-white/10 bg-white/[0.03] p-3"
                   >
-                    <p className="text-[0.6rem] uppercase tracking-[0.2em] text-mist">
+                    <p className="text-[0.55rem] uppercase tracking-[0.15em] text-mist">
                       {stat.label}
                     </p>
-                    <p className="mt-1 font-display text-xl text-pearl">{stat.value}</p>
+                    <p className="mt-1 font-display text-lg text-pearl">{stat.value}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-auto border-t border-white/10 p-4">
                 <Link
-                  href="/collections"
+                  href={product.href}
                   className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-champagne hover:text-pearl"
+                  {...(product.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
                 >
-                  Explore {product.name}
+                  {product.cta}
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </Link>
               </div>

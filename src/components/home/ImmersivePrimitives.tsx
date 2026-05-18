@@ -7,14 +7,20 @@ export function SectionShell({
   children,
   className = '',
   watermark,
+  compact = false,
 }: {
   id: string
   children: ReactNode
   className?: string
   watermark?: string
+  /** When true, section sizes to content (no forced 100vh). */
+  compact?: boolean
 }) {
   return (
-    <section id={id} className={`immersive-section relative ${className}`}>
+    <section
+      id={id}
+      className={`relative ${compact ? '' : 'immersive-section'} ${className}`}
+    >
       {watermark ? (
         <span
           aria-hidden
