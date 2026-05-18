@@ -81,7 +81,7 @@ export const platformPillars = [
   },
   {
     title: 'Atelier craft',
-    body: 'Belarusian–Baltic discipline in grid, type, and motion — generous vertical rhythm, restrained animation, interfaces sized for boardrooms and gloved hands.',
+    body: 'Baltic discipline in grid, type, and motion — generous vertical rhythm, restrained animation, interfaces sized for boardrooms and gloved hands.',
   },
 ]
 

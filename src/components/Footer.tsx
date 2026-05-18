@@ -14,7 +14,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-3 xl:col-span-1">
             <div className="font-display text-2xl tracking-[0.25em] text-parchment">HBM</div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist">
-              Luxury enterprise SaaS holding — Belarusian craft, biblical conviction,
+              Luxury enterprise SaaS holding — biblical conviction,
               and software built to endure audit and time.
             </p>
             <div className="mt-6 flex items-center gap-2 text-sm text-mist">
