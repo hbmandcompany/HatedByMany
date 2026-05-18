@@ -20,7 +20,7 @@ export function LoginPanel() {
     >
       <form
         onSubmit={handleSubmit}
-        className="space-y-6 rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-8 shadow-lux"
+        className="space-y-6 rounded-[1.75rem] border border-stone/10 bg-white/[0.03] p-8 shadow-lux"
       >
         <div>
           <label
@@ -36,7 +36,7 @@ export function LoginPanel() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@entity.com"
-            className="mt-2 w-full rounded-full border border-white/15 bg-obsidian/60 px-4 py-3 text-sm text-pearl placeholder:text-mist/60 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
+            className="mt-2 w-full rounded-full border border-stone/15 bg-obsidian/60 px-4 py-3 text-sm text-pearl placeholder:text-mist/60 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
           />
         </div>
         <div>
@@ -53,13 +53,13 @@ export function LoginPanel() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
-            className="mt-2 w-full rounded-full border border-white/15 bg-obsidian/60 px-4 py-3 text-sm text-pearl placeholder:text-mist/60 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
+            className="mt-2 w-full rounded-full border border-stone/15 bg-obsidian/60 px-4 py-3 text-sm text-pearl placeholder:text-mist/60 focus:border-champagne/50 focus:outline-none focus:ring-1 focus:ring-champagne/30"
           />
         </div>
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-full bg-pearl py-3 text-sm font-semibold uppercase tracking-[0.2em] text-obsidian transition-colors hover:bg-champagne disabled:opacity-60"
+          className="w-full rounded-full bg-frost py-3 text-sm font-semibold uppercase tracking-[0.2em] text-obsidian transition-colors hover:bg-champagne disabled:opacity-60"
         >
           {loading ? 'Signing in…' : 'Enter console'}
         </button>

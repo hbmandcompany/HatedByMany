@@ -8,11 +8,11 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-white/10 bg-graphite/90">
+    <footer className="border-t border-stone/10 bg-graphite/90">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
           <div className="sm:col-span-2 lg:col-span-3 xl:col-span-1">
-            <div className="font-display text-2xl tracking-[0.25em] text-pearl">HBM</div>
+            <div className="font-display text-2xl tracking-[0.25em] text-parchment">HBM</div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist">
               Luxury enterprise SaaS holding — Belarusian craft, biblical conviction,
               and software built to endure audit and time.
@@ -23,7 +23,7 @@ export function Footer() {
             </div>
             <Link
               href="/login"
-              className="mt-6 inline-flex rounded-full border border-white/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-pearl transition-colors hover:border-champagne/50"
+              className="mt-6 inline-flex rounded-full border border-stone/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-parchment transition-colors hover:border-champagne/50"
             >
               Console login
             </Link>
@@ -39,7 +39,7 @@ export function Footer() {
                   <li key={link.href + link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-mist transition-colors hover:text-pearl"
+                      className="text-sm text-mist transition-colors hover:text-parchment"
                     >
                       {link.name}
                     </Link>
@@ -50,12 +50,12 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-white/10 pt-8">
+        <div className="mt-14 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-stone/10 pt-8">
           {footerUtilityLinks.map((link) => (
             <Link
               key={link.href + link.name}
               href={link.href}
-              className="text-xs text-mist transition-colors hover:text-pearl"
+              className="text-xs text-mist transition-colors hover:text-parchment"
               {...(link.href.startsWith('http')
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}

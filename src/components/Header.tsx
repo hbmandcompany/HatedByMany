@@ -40,14 +40,14 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-obsidian/90 backdrop-blur-xl transition-transform duration-300 ease-out ${
+      className={`fixed inset-x-0 top-0 z-50 border-b border-stone/10 bg-obsidian/90 backdrop-blur-xl transition-transform duration-300 ease-out ${
         hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-display text-2xl font-medium tracking-[0.2em] text-pearl"
+          className="font-display text-2xl font-medium tracking-[0.2em] text-parchment"
         >
           HBM
         </Link>
@@ -56,14 +56,14 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.18em] text-mist transition-colors hover:text-pearl"
+              className="text-xs font-medium uppercase tracking-[0.18em] text-mist transition-colors hover:text-parchment"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/whitepaper"
-            className="text-xs font-medium uppercase tracking-[0.18em] text-mist transition-colors hover:text-pearl"
+            className="text-xs font-medium uppercase tracking-[0.18em] text-mist transition-colors hover:text-parchment"
           >
             Whitepaper
           </Link>
@@ -71,13 +71,13 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/download"
-            className="hidden rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-pearl transition-colors hover:border-champagne/60 hover:text-champagne sm:inline-flex"
+            className="hidden rounded-full border border-stone/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-parchment transition-colors hover:border-champagne/60 hover:text-champagne sm:inline-flex"
           >
             Clients
           </Link>
           <Link
             href="/login"
-            className="inline-flex items-center rounded-full bg-pearl/90 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-obsidian shadow-lux transition-colors hover:bg-pearl"
+            className="inline-flex items-center rounded-full bg-frost/90 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-obsidian shadow-lux transition-colors hover:bg-frost"
           >
             Console
           </Link>
