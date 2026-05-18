@@ -33,7 +33,7 @@ export function ConsoleDashboardSection() {
         <div className="max-w-3xl">
           <p className="saas-eyebrow">Platform · Holding Console</p>
           <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
-            Banking, governance, and oracles in one surface
+            The Surface
           </h2>
           <p className="mt-6 text-base leading-relaxed text-mist md:text-lg">
             Treasury rails, signer approvals, compliance attestations, and oracle
@@ -41,7 +41,9 @@ export function ConsoleDashboardSection() {
           </p>
         </div>
 
-        <HoldingConsole />
+        <div className="mx-auto mt-10 max-w-5xl origin-top scale-[0.88] sm:scale-[0.92] lg:max-w-[52rem]">
+          <HoldingConsole />
+        </div>
 
         <div className="mt-8 flex flex-wrap gap-4">
           <Link

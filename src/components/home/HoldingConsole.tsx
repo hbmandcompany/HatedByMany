@@ -49,10 +49,10 @@ export function HoldingConsole() {
   const view = consoleViews[activeTab]
 
   return (
-    <div className="saas-window mt-14 overflow-hidden shadow-lux">
+    <div className="saas-window overflow-hidden shadow-lux">
       <WindowChrome title="HBM Holding Console · production" />
-      <div className="flex min-h-[28rem] flex-col lg:flex-row">
-        <aside className="hidden w-56 shrink-0 border-r border-stone/10 bg-obsidian/80 p-4 lg:block">
+      <div className="flex min-h-[22rem] flex-col lg:flex-row">
+        <aside className="hidden w-48 shrink-0 border-r border-stone/10 bg-obsidian/80 p-3 lg:block">
           <p className="mb-4 px-2 text-[0.6rem] font-semibold uppercase tracking-[0.25em] text-mist">
             Workspace
           </p>
@@ -140,7 +140,7 @@ export function HoldingConsole() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
                 {view.chartLabel ?? 'Activity · 24h'}
               </p>
-              <div className="mt-4 flex h-32 items-end gap-1.5">
+              <div className="mt-3 flex h-24 items-end gap-1">
                 {[40, 55, 48, 62, 45, 38, 52, 44, 36, 42, 50, 35].map((h, i) => (
                   <div
                     key={i}
