@@ -30,7 +30,7 @@ const tabIcons: Record<ConsoleTabId, typeof LayoutDashboard> = {
 
 function WindowChrome({ title }: { title: string }) {
   return (
-    <div className="saas-chrome flex items-center gap-3 border-b border-white/10 px-4 py-3">
+    <div className="saas-chrome flex items-center gap-3 border-b border-stone/10 px-4 py-3">
       <div className="flex gap-1.5">
         <span className="h-2.5 w-2.5 rounded-full bg-accent-rose/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-champagne/60" />
@@ -52,7 +52,7 @@ export function HoldingConsole() {
     <div className="saas-window mt-14 overflow-hidden shadow-lux">
       <WindowChrome title="HBM Holding Console · production" />
       <div className="flex min-h-[28rem] flex-col lg:flex-row">
-        <aside className="hidden w-56 shrink-0 border-r border-white/10 bg-obsidian/80 p-4 lg:block">
+        <aside className="hidden w-56 shrink-0 border-r border-stone/10 bg-obsidian/80 p-4 lg:block">
           <p className="mb-4 px-2 text-[0.6rem] font-semibold uppercase tracking-[0.25em] text-mist">
             Workspace
           </p>
@@ -67,8 +67,8 @@ export function HoldingConsole() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
                     isActive
-                      ? 'bg-white/[0.08] text-pearl'
-                      : 'text-mist hover:bg-white/[0.04] hover:text-pearl'
+                      ? 'bg-stone/[0.08] text-parchment'
+                      : 'text-mist hover:bg-stone/[0.04] hover:text-parchment'
                   }`}
                 >
                   <Icon className="h-4 w-4 shrink-0 text-champagne" />
@@ -80,14 +80,14 @@ export function HoldingConsole() {
         </aside>
 
         <div className="flex flex-1 flex-col bg-obsidian/40">
-          <div className="flex flex-wrap items-center gap-3 border-b border-white/10 px-4 py-3 sm:px-6">
-            <div className="flex flex-1 items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-mist">
+          <div className="flex flex-wrap items-center gap-3 border-b border-stone/10 px-4 py-3 sm:px-6">
+            <div className="flex flex-1 items-center gap-2 rounded-full border border-stone/10 bg-stone/[0.04] px-4 py-2 text-sm text-mist">
               <Search className="h-4 w-4" />
               Search tenants, signers, journals…
             </div>
             <button
               type="button"
-              className="rounded-full border border-white/10 p-2 text-mist"
+              className="rounded-full border border-stone/10 p-2 text-mist"
               aria-label="Notifications"
             >
               <Bell className="h-4 w-4" />
@@ -97,7 +97,7 @@ export function HoldingConsole() {
             </div>
           </div>
 
-          <div className="border-b border-white/10 px-4 py-2 sm:hidden">
+          <div className="border-b border-stone/10 px-4 py-2 sm:hidden">
             <div className="flex gap-1 overflow-x-auto pb-1">
               {consoleTabs.map((tab) => (
                 <button
@@ -106,7 +106,7 @@ export function HoldingConsole() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`shrink-0 rounded-lg px-3 py-1.5 text-xs ${
                     activeTab === tab.id
-                      ? 'bg-white/[0.08] text-pearl'
+                      ? 'bg-stone/[0.08] text-parchment'
                       : 'text-mist'
                   }`}
                 >
@@ -124,19 +124,19 @@ export function HoldingConsole() {
             {view.metrics.map((card) => (
               <div
                 key={card.label}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                className="rounded-2xl border border-stone/10 bg-stone/[0.03] p-4"
               >
                 <p className="text-[0.65rem] uppercase tracking-[0.2em] text-mist">
                   {card.label}
                 </p>
-                <p className="mt-2 font-display text-2xl text-pearl">{card.value}</p>
+                <p className="mt-2 font-display text-2xl text-parchment">{card.value}</p>
                 <p className="mt-1 text-xs text-accent-pine">{card.delta}</p>
               </div>
             ))}
           </div>
 
           <div className="grid flex-1 gap-4 px-4 pb-4 sm:px-6 sm:pb-6 lg:grid-cols-5">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 lg:col-span-2">
+            <div className="rounded-2xl border border-stone/10 bg-stone/[0.03] p-4 lg:col-span-2">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
                 {view.chartLabel ?? 'Activity · 24h'}
               </p>
@@ -150,8 +150,8 @@ export function HoldingConsole() {
                 ))}
               </div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] lg:col-span-3">
-              <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+            <div className="overflow-hidden rounded-2xl border border-stone/10 bg-stone/[0.03] lg:col-span-3">
+              <div className="flex items-center justify-between border-b border-stone/10 px-4 py-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mist">
                   {view.tableTitle}
                 </p>
@@ -159,7 +159,7 @@ export function HoldingConsole() {
               </div>
               <table className="w-full text-left text-sm">
                 <thead>
-                  <tr className="border-b border-white/10 text-[0.65rem] uppercase tracking-[0.15em] text-mist">
+                  <tr className="border-b border-stone/10 text-[0.65rem] uppercase tracking-[0.15em] text-mist">
                     <th className="px-4 py-2 font-medium">Entity</th>
                     <th className="px-4 py-2 font-medium">Status</th>
                     <th className="px-4 py-2 font-medium">
@@ -172,9 +172,9 @@ export function HoldingConsole() {
                   {view.rows.map((row) => (
                     <tr
                       key={row.entity}
-                      className="border-b border-white/5 text-mist last:border-0"
+                      className="border-b border-stone/5 text-mist last:border-0"
                     >
-                      <td className="px-4 py-3 text-pearl">{row.entity}</td>
+                      <td className="px-4 py-3 text-parchment">{row.entity}</td>
                       <td className="px-4 py-3">
                         <span
                           className={`rounded-full px-2 py-0.5 text-xs ${
@@ -188,7 +188,7 @@ export function HoldingConsole() {
                               ? 'bg-accent-pine/20 text-accent-pine'
                               : row.status === 'Degraded' || row.status === 'Urgent'
                                 ? 'bg-champagne/20 text-champagne'
-                                : 'bg-white/10 text-mist'
+                                : 'bg-stone/10 text-mist'
                           }`}
                         >
                           {row.status}

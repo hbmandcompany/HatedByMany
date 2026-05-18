@@ -49,8 +49,8 @@ export function HomePage() {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-obsidian/80 via-obsidian/60 to-obsidian" />
-        <div className="grid-overlay pointer-events-none absolute inset-0 opacity-40" />
+        <div className="absolute inset-0 bg-obsidian/88" />
+        <div className="grid-overlay pointer-events-none absolute inset-0" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col px-6 pb-16 pt-32 sm:px-10 lg:pb-24 lg:pt-40">
           <p
@@ -64,13 +64,13 @@ export function HomePage() {
           <div
             className="mt-10 max-w-5xl"
           >
-            <h1 className="font-display text-[clamp(2.85rem,9vw,6rem)] leading-[0.98] tracking-tight">
+            <h1 className="font-display text-[clamp(2.85rem,9vw,6rem)] leading-[0.98] tracking-tight text-parchment">
               hated
-              <span className="text-champagne/90"> by many.</span>
+              <span className="text-champagne"> by many.</span>
               <br />
-              <span className="italic text-pearl/90">faithful to One.</span>
+              <span className="italic text-pearl">faithful to One.</span>
             </h1>
-            <div className="mt-10 h-px w-32 bg-white/15" />
+            <div className="mt-10 h-px w-32 bg-graphite/15" />
             <p className="manuscript mt-10 max-w-3xl text-lg leading-[1.9] text-mist md:text-xl">
               Hated By Many Holdings is a luxury software atelier — Belarusian
               discipline, biblical conviction, and enterprise rigor composed into
@@ -92,13 +92,13 @@ export function HomePage() {
           >
             <Link
               href="#platform"
-              className="inline-flex items-center justify-center rounded-full bg-pearl px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian shadow-lux transition hover:bg-champagne"
+              className="inline-flex items-center justify-center rounded-full bg-frost px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-obsidian shadow-lux transition hover:bg-parchment"
             >
               Explore platform
             </Link>
             <Link
               href="#chapter-i"
-              className="inline-flex items-center justify-center rounded-full border border-white/25 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50 hover:text-champagne"
+              className="inline-flex items-center justify-center rounded-full border border-stone/25 px-10 py-3.5 text-xs font-semibold uppercase tracking-[0.25em] text-pearl transition hover:border-champagne/50 hover:text-champagne"
             >
               Read chapters
             </Link>
@@ -180,7 +180,7 @@ export function HomePage() {
                
                 className="glass-panel border-l-2 border-belarus-red/70 p-8 md:p-10"
               >
-                <p className="font-display text-2xl italic leading-snug text-pearl/95 md:text-3xl">
+                <p className="font-display text-2xl italic leading-snug text-parchment md:text-3xl">
                   &ldquo;For God so loved the world that He gave His only Son,
                   that whoever believes in Him should not perish but have
                   eternal life.&rdquo;
@@ -194,7 +194,7 @@ export function HomePage() {
             <div className="lg:sticky lg:top-28 lg:self-start">
               <div
                
-                className="relative aspect-[3/4] overflow-hidden rounded-[2rem] border border-white/10 shadow-lux"
+                className="relative aspect-[3/4] overflow-hidden rounded-[2rem] border border-stone/10 shadow-lux"
               >
                 <Image
                   src="/_ (36).jpeg"
@@ -203,12 +203,12 @@ export function HomePage() {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 480px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent" />
+                <div className="absolute inset-0 bg-obsidian/75" />
                 <div className="absolute inset-x-0 bottom-0 p-8 md:p-10">
                   <p className="text-xs uppercase tracking-[0.35em] text-champagne">
                     Meditation
                   </p>
-                  <p className="mt-3 font-display text-3xl leading-snug text-pearl">
+                  <p className="mt-3 font-display text-3xl leading-snug text-parchment">
                     The Lamb who was slain — and lives
                   </p>
                   <p className="manuscript mt-4 text-sm leading-relaxed text-mist">
@@ -232,7 +232,7 @@ export function HomePage() {
         id="chapter-iii"
         watermark="III"
         compact
-        className="bg-gradient-to-b from-graphite via-obsidian to-obsidian pb-16"
+        className="bg-graphite pb-16"
       >
 
         <div className="relative z-10 mx-auto w-full max-w-6xl flex-1 px-6 py-24 sm:px-10 lg:py-32">
@@ -257,7 +257,7 @@ export function HomePage() {
             {covenantTenets.map((tenet, i) => (
               <li
                 key={tenet}
-                className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 text-left"
+                className="flex gap-4 rounded-2xl border border-stone/10 bg-graphite/[0.03] px-6 py-5 text-left"
               >
                 <span className="font-display text-lg text-champagne/80">
                   {String(i + 1).padStart(2, '0')}

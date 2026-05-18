@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply border-white/10;
+    @apply border-stone/20;
   }
 
   html {
@@ -17,8 +17,15 @@
     overflow-x: hidden;
   }
 
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-parchment;
+  }
+
   ::selection {
-    @apply bg-champagne/30 text-pearl;
+    @apply bg-belarus-red/25 text-parchment;
   }
 
   ::-webkit-scrollbar {
@@ -26,11 +33,11 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #0f1117;
+    background: #040406;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(154, 163, 178, 0.4);
+    background: rgba(74, 70, 79, 0.6);
     border-radius: 999px;
   }
 }
@@ -55,36 +62,35 @@
   }
 
   .grid-overlay {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black, transparent);
+    background-image: none;
+    opacity: 0.12;
+    background-color: transparent;
+    border: 1px solid rgba(42, 39, 46, 0.4);
   }
 
   .saas-metric {
-    @apply rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    @apply rounded-3xl border border-stone/15 bg-graphite/80 p-6;
+    box-shadow: inset 0 1px 0 rgba(168, 159, 146, 0.04);
   }
 
   .passage-block {
-    @apply border-l border-white/10 pl-6 md:pl-8;
+    @apply border-l border-belarus-red/25 pl-6 md:pl-8;
   }
 
   .passage-marker {
-    @apply shrink-0 font-display text-sm text-champagne/80;
+    @apply shrink-0 font-display text-sm text-champagne;
     letter-spacing: 0.2em;
   }
 
   .glass-panel {
-    @apply rounded-[1.75rem] border border-white/10 bg-white/[0.04] shadow-lux backdrop-blur-xl;
+    @apply rounded-[1.75rem] border border-stone/15 bg-graphite/90 shadow-lux;
     box-shadow:
-      0 24px 80px rgba(0, 0, 0, 0.45),
-      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      0 24px 80px rgba(0, 0, 0, 0.55),
+      inset 0 1px 0 rgba(168, 159, 146, 0.04);
   }
 
   .noise {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   }
 
   .belarus-eyebrow {
@@ -92,15 +98,16 @@
   }
 
   .chapter-label {
-    @apply text-xs font-semibold uppercase tracking-[0.35em] text-champagne;
+    @apply text-xs font-semibold uppercase tracking-[0.35em] text-belarus-red/90;
   }
 
   .manuscript {
-    @apply font-sans font-light;
+    @apply font-sans font-light text-pearl;
   }
 
   .chapter-watermark {
     user-select: none;
+    @apply text-stone/30;
   }
 
   .saas-eyebrow {
@@ -108,13 +115,13 @@
   }
 
   .saas-window {
-    @apply rounded-[1.75rem] border border-white/10 bg-graphite/80 backdrop-blur-xl;
+    @apply rounded-[1.75rem] border border-stone/15 bg-graphite/95;
     box-shadow:
-      0 32px 100px rgba(0, 0, 0, 0.55),
-      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      0 32px 100px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(168, 159, 146, 0.05);
   }
 
   .saas-chrome {
-    @apply bg-obsidian/60;
+    @apply bg-obsidian/90;
   }
 }

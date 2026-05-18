@@ -12,7 +12,7 @@ import { threeWiseMenIntro, threeWiseMenProducts } from '@/lib/threeWiseMenConte
 
 function WindowChrome({ title }: { title: string }) {
   return (
-    <div className="saas-chrome flex items-center gap-3 border-b border-white/10 px-4 py-3">
+    <div className="saas-chrome flex items-center gap-3 border-b border-stone/10 px-4 py-3">
       <div className="flex gap-1.5">
         <span className="h-2.5 w-2.5 rounded-full bg-accent-rose/80" />
         <span className="h-2.5 w-2.5 rounded-full bg-champagne/60" />
@@ -32,7 +32,7 @@ export function ConsoleDashboardSection() {
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="max-w-3xl">
           <p className="saas-eyebrow">Platform · Holding Console</p>
-          <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
             Banking, governance, and oracles in one surface
           </h2>
           <p className="mt-6 text-base leading-relaxed text-mist md:text-lg">
@@ -46,7 +46,7 @@ export function ConsoleDashboardSection() {
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
             href="/login"
-            className="inline-flex items-center gap-2 rounded-full bg-pearl px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-obsidian hover:bg-champagne"
+            className="inline-flex items-center gap-2 rounded-full bg-frost px-8 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-obsidian hover:bg-champagne"
           >
             Open console
             <ArrowUpRight className="h-4 w-4" />
@@ -70,7 +70,7 @@ export function ProductsSection() {
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="text-center">
           <p className="saas-eyebrow">{threeWiseMenIntro.eyebrow}</p>
-          <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
             {threeWiseMenIntro.title}
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-mist">{threeWiseMenIntro.body}</p>
@@ -82,14 +82,14 @@ export function ProductsSection() {
               key={product.id}
               className="saas-window flex flex-col overflow-hidden"
             >
-              <div className="bg-gradient-to-b from-champagne/10 to-transparent p-6">
+              <div className="border-b border-stone/10 bg-graphite/80 p-6">
                 <p className="text-xs uppercase tracking-[0.25em] text-champagne">
                   {product.tagline}
                 </p>
-                <h3 className="mt-2 font-display text-3xl text-pearl">{product.name}</h3>
+                <h3 className="mt-2 font-display text-3xl text-parchment">{product.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-mist">{product.description}</p>
               </div>
-              <ul className="space-y-2 border-b border-white/10 px-4 py-4">
+              <ul className="space-y-2 border-b border-stone/10 px-4 py-4">
                 {product.highlights.map((line) => (
                   <li key={line} className="text-xs leading-relaxed text-mist">
                     · {line}
@@ -100,7 +100,7 @@ export function ProductsSection() {
                 {product.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-xl border border-white/10 bg-white/[0.03] p-3"
+                    className="rounded-xl border border-stone/10 bg-graphite/[0.03] p-3"
                   >
                     <p className="text-[0.55rem] uppercase tracking-[0.15em] text-mist">
                       {stat.label}
@@ -109,7 +109,7 @@ export function ProductsSection() {
                   </div>
                 ))}
               </div>
-              <div className="mt-auto border-t border-white/10 p-4">
+              <div className="mt-auto border-t border-stone/10 p-4">
                 <Link
                   href={product.href}
                   className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-champagne hover:text-pearl"
@@ -131,11 +131,11 @@ export function ProductsSection() {
 
 export function WorkflowSection() {
   return (
-    <section id="workflows" className="immersive-section bg-gradient-to-b from-graphite to-obsidian py-24 lg:py-32">
+    <section id="workflows" className="immersive-section bg-graphite py-24 lg:py-32">
       <div className="mx-auto grid max-w-6xl gap-16 px-6 lg:grid-cols-2 lg:items-center sm:px-10">
         <div>
           <p className="saas-eyebrow">Implementation</p>
-          <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
             From provision to audit in four movements
           </h2>
           <p className="mt-6 leading-relaxed text-mist">
@@ -171,7 +171,7 @@ export function WorkflowSection() {
                 className={`flex items-center gap-4 rounded-xl border px-4 py-3 ${
                   item.active
                     ? 'border-champagne/40 bg-champagne/5'
-                    : 'border-white/10 bg-white/[0.02]'
+                    : 'border-stone/10 bg-graphite/[0.02]'
                 }`}
               >
                 <div
@@ -180,7 +180,7 @@ export function WorkflowSection() {
                       ? 'bg-accent-pine text-obsidian'
                       : item.active
                         ? 'border border-champagne text-champagne'
-                        : 'border border-white/20 text-mist'
+                        : 'border border-stone/20 text-mist'
                   }`}
                 >
                   {item.done ? '✓' : item.active ? '…' : ''}
@@ -214,7 +214,7 @@ export function SecuritySection() {
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="saas-eyebrow">Security & compliance</p>
-          <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
             Trust engineered into every layer
           </h2>
           <p className="mt-6 text-mist">
@@ -235,9 +235,9 @@ export function SecuritySection() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+                className="flex gap-4 rounded-2xl border border-stone/10 bg-graphite/[0.03] p-5"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.06]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-graphite/[0.06]">
                   <item.icon className="h-5 w-5 text-champagne" />
                 </div>
                 <div>
@@ -250,7 +250,7 @@ export function SecuritySection() {
 
           <div className="saas-window overflow-hidden">
             <WindowChrome title="Compliance center" />
-            <div className="divide-y divide-white/10">
+            <div className="divide-y divide-stone/10">
               {policies.map((p) => (
                 <div
                   key={p.name}
@@ -263,7 +263,7 @@ export function SecuritySection() {
                 </div>
               ))}
             </div>
-            <div className="border-t border-white/10 bg-white/[0.02] p-5">
+            <div className="border-t border-stone/10 bg-graphite/[0.02] p-5">
               <p className="text-xs uppercase tracking-[0.2em] text-mist">Last audit export</p>
               <p className="mt-1 font-mono text-sm text-pearl">evidence-pack-2026-Q1.zip</p>
               <Link
@@ -283,11 +283,11 @@ export function SecuritySection() {
 
 export function IntegrationsSection() {
   return (
-    <section id="integrations" className="immersive-section border-y border-white/10 bg-graphite py-20">
+    <section id="integrations" className="immersive-section border-y border-stone/10 bg-graphite py-20">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="text-center">
           <p className="saas-eyebrow">Integrations</p>
-          <h2 className="mt-4 font-display text-3xl text-pearl md:text-4xl">
+          <h2 className="mt-4 font-display text-3xl text-parchment md:text-4xl">
             Connects to the stack you already run
           </h2>
         </div>
@@ -298,7 +298,7 @@ export function IntegrationsSection() {
           {integrations.map((name) => (
             <span
               key={name}
-              className="rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-medium text-mist"
+              className="rounded-xl border border-stone/10 bg-graphite/[0.04] px-5 py-3 text-sm font-medium text-mist"
             >
               {name}
             </span>
@@ -331,7 +331,7 @@ export function PricingSection() {
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <div className="text-center">
           <p className="saas-eyebrow">Commercial</p>
-          <h2 className="mt-4 font-display text-4xl text-pearl md:text-5xl">
+          <h2 className="mt-4 font-display text-4xl text-parchment md:text-5xl">
             Enterprise pricing, quoted with integrity
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-mist">
@@ -346,8 +346,8 @@ export function PricingSection() {
               key={tier.name}
               className={`rounded-[2rem] border p-8 ${
                 tier.highlighted
-                  ? 'border-champagne/40 bg-gradient-to-b from-champagne/10 to-transparent shadow-lux'
-                  : 'border-white/10 bg-white/[0.03]'
+                  ? 'border-belarus-red/30 bg-graphite shadow-lux'
+                  : 'border-stone/10 bg-graphite/[0.03]'
               }`}
             >
               <h3 className="font-display text-2xl text-pearl">{tier.name}</h3>
@@ -365,8 +365,8 @@ export function PricingSection() {
                 href="/learn-more"
                 className={`mt-8 inline-flex w-full items-center justify-center rounded-full py-3 text-xs font-semibold uppercase tracking-[0.2em] ${
                   tier.highlighted
-                    ? 'bg-pearl text-obsidian hover:bg-champagne'
-                    : 'border border-white/20 text-pearl hover:border-champagne/50'
+                    ? 'bg-frost text-obsidian hover:bg-champagne'
+                    : 'border border-stone/20 text-pearl hover:border-champagne/50'
                 }`}
               >
                 Request quote

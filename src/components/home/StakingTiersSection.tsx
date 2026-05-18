@@ -1,9 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
-import { TREASURY_STAKED_TOKENS } from '@/lib/stakingContent'
-import { StakingTiersConsole } from '@/components/home/StakingTiersConsole'
+import { stakingTiers, TREASURY_STAKED_TOKENS } from '@/lib/stakingContent'
+import { StakingTierFullscreen } from '@/components/home/StakingTierFullscreen'
 
 function formatTokens(n: number) {
   return new Intl.NumberFormat('en-US').format(n)
@@ -11,15 +9,15 @@ function formatTokens(n: number) {
 
 export function StakingTiersSection() {
   return (
-    <section className="bg-obsidian py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6 sm:px-10">
+    <section id="chapter-ii" className="bg-obsidian">
+      <div className="snap-panel border-b border-stone/10 px-6 py-20 sm:px-10 lg:py-24">
         <div className="mx-auto max-w-4xl text-center">
           <p className="chapter-label">Раздзел II · Chapter II</p>
-          <h2 className="mt-5 font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight">
+          <h2 className="mt-5 font-display text-[clamp(2.25rem,5vw,4rem)] leading-tight text-parchment">
             Our Services to
             <span className="text-champagne"> our Savior</span>
           </h2>
-          <p className="manuscript mx-auto mt-6 max-w-2xl text-base leading-relaxed text-mist md:text-lg">
+          <p className="manuscript mx-auto mt-6 max-w-2xl text-base leading-relaxed text-pearl md:text-lg">
             Three voting memberships in the protocol treasury. Your influence is
             always incremental — stake more, weigh more — but the tier you hold
             defines which proposals you may touch and how returns accrue.
@@ -28,21 +26,11 @@ export function StakingTiersSection() {
             Illustrative network stake: {formatTokens(TREASURY_STAKED_TOKENS)} HBM
           </p>
         </div>
-
-        <div className="mt-14">
-          <StakingTiersConsole />
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/whitepaper"
-            className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-champagne hover:text-pearl"
-          >
-            Full protocol memo
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
-        </div>
       </div>
+
+      {stakingTiers.map((tier) => (
+        <StakingTierFullscreen key={tier.id} tier={tier} />
+      ))}
     </section>
   )
 }
