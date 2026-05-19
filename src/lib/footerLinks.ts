@@ -10,14 +10,9 @@ export const footerColumns: FooterColumn[] = [
     title: 'Platform',
     links: [
       { name: 'Three Wise Men', href: '/three-wise-men' },
-      { name: 'Economy', href: '/economy' },
-      { name: 'Allocation', href: '/allocation' },
       { name: 'Michelangelo', href: '/michelangelo' },
       { name: 'Kiss', href: '/kiss' },
       { name: 'Vanity', href: '/vanity' },
-      { name: 'Treasury', href: '/wallet' },
-      { name: 'Collections', href: '/collections' },
-      { name: 'Non-Custodial Wallet', href: '/wallet' },
     ],
   },
   {
