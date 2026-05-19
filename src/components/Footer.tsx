@@ -9,9 +9,9 @@ export function Footer() {
 
   return (
     <footer className="border-t border-stone/10 bg-graphite/90">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          <div className="sm:col-span-2 lg:col-span-3 xl:col-span-1">
+      <div className="mx-auto max-w-[90rem] px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-[1.15fr_repeat(5,minmax(9.5rem,1fr))] xl:gap-x-6">
+          <div className="sm:col-span-2 lg:col-span-1 xl:col-span-1">
             <div className="font-display text-2xl tracking-[0.25em] text-parchment">HBM</div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-mist">
               Luxury enterprise SaaS holding — biblical conviction,
@@ -30,7 +30,10 @@ export function Footer() {
           </div>
 
           {footerColumns.map((section) => (
-            <div key={section.title}>
+            <div
+              key={section.title}
+              className={section.title === 'Chapters' ? 'min-w-[11.5rem]' : undefined}
+            >
               <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-champagne">
                 {section.title}
               </h3>
@@ -39,7 +42,9 @@ export function Footer() {
                   <li key={link.href + link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-mist transition-colors hover:text-parchment"
+                      className={`text-sm text-mist transition-colors hover:text-parchment ${
+                        section.title === 'Chapters' ? 'whitespace-nowrap' : ''
+                      }`}
                     >
                       {link.name}
                     </Link>

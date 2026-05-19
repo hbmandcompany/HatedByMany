@@ -9,9 +9,10 @@ export const footerColumns: FooterColumn[] = [
   {
     title: 'Platform',
     links: [
-      { name: 'Accreditation', href: '/accreditation' },
-      { name: 'Gifting · USDC', href: 'https://threewisemen.cc' },
-      { name: 'NFT Levels', href: '/#products' },
+      { name: 'Three Wise Men', href: '/three-wise-men' },
+      { name: 'Economy', href: '/economy' },
+      { name: 'Allocation', href: '/allocation' },
+      { name: 'NFT Levels', href: '/three-wise-men' },
       { name: 'Network · Protocol', href: '/whitepaper' },
       { name: 'Solutions', href: '/solutions' },
       { name: 'Network Topology', href: '/network' },
@@ -38,9 +39,8 @@ export const footerColumns: FooterColumn[] = [
       { name: 'University', href: '/learn-more' },
       { name: 'Investor Relations', href: '/investor-relations' },
       { name: 'Documentation', href: '/documentation' },
-      { name: 'Security & Compliance', href: '/#security' },
-      { name: 'Economy', href: '/economy' },
-      { name: 'Allocation', href: '/allocation' },
+      { name: 'Accreditation', href: '/accreditation' },
+      { name: 'Security & Compliance', href: '/security-compliance' },
     ],
   },
   {
@@ -48,7 +48,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { name: 'Chapter I · Monetary Policy', href: '/monetary-policy' },
       { name: 'Chapter II · Governance', href: '/governance' },
-      { name: 'Chapter III · The Covenant', href: '/#chapter-iii' },
+      { name: 'Chapter III · The Covenant', href: '/chapter-iii' },
     ],
   },
   {
@@ -67,6 +67,6 @@ export const footerUtilityLinks: FooterLink[] = [
   { name: 'Privacy', href: '/legal' },
   { name: 'Terms', href: '/legal' },
   { name: 'DPA', href: '/legal' },
-  { name: 'SOC 2', href: '/#security' },
+  { name: 'SOC 2', href: '/security-compliance' },
   { name: 'GitHub', href: 'https://github.com/hbmandcompany/HatedByMany' },
 ]
