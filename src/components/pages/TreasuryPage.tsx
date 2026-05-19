@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { ConsoleDashboardSection } from '@/components/home/SoftwareSections'
 import { MetricCard } from '@/components/home/ImmersivePrimitives'
 import {
   allocations,
@@ -426,7 +427,10 @@ export function TreasuryPage() {
   const lastCompleted = quarterlyRevenue[quarterlyRevenue.length - 2]
 
   return (
-    <main className="min-h-screen bg-obsidian pt-24">
+    <main className="min-h-screen bg-obsidian">
+      <div className="pt-24">
+        <ConsoleDashboardSection />
+      </div>
       {/* Section 1: Hero */}
       <section className="immersive-section relative flex min-h-screen items-center overflow-hidden border-b border-stone/15">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,26,45,0.1),transparent_55%)]" />

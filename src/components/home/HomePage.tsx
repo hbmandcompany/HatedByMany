@@ -3,11 +3,6 @@
 import { useRef } from 'react'
 import { Footer } from '@/components/Footer'
 import { HeroSection } from '@/components/home/HeroSection'
-import {
-  ConsoleDashboardSection,
-  IntegrationsSection,
-  PricingSection,
-} from '@/components/home/SoftwareSections'
 
 export function HomePage() {
   const rootRef = useRef<HTMLDivElement>(null)
@@ -19,11 +14,6 @@ export function HomePage() {
       className="immersive-scroll noise text-pearl"
     >
       <HeroSection />
-
-      <ConsoleDashboardSection />
-      <IntegrationsSection />
-      <PricingSection />
-
       <Footer />
     </div>
   )

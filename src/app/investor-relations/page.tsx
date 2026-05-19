@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Footer } from '@/components/Footer'
+import { IntegrationsSection } from '@/components/home/SoftwareSections'
 
 export const metadata: Metadata = {
   title: 'Hated By Many',
@@ -139,6 +140,8 @@ export default function InvestorRelationsPage() {
           </p>
         </article>
       </section>
+
+      <IntegrationsSection />
 
       <section className="border-t border-stone/15 bg-graphite/30">
         <blockquote className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
