@@ -9,7 +9,7 @@ export const footerColumns: FooterColumn[] = [
   {
     title: 'Platform',
     links: [
-      { name: 'Holding Console', href: '/#platform' },
+      { name: 'Accreditation', href: '/accreditation' },
       { name: 'Gifting · USDC', href: 'https://threewisemen.cc' },
       { name: 'NFT Levels', href: '/#products' },
       { name: 'Network · Protocol', href: '/whitepaper' },
@@ -23,7 +23,7 @@ export const footerColumns: FooterColumn[] = [
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about-us' },
-      { name: 'Our Story', href: '/our-story' },
+      { name: 'Thesis', href: '/thesis' },
       { name: 'Partners', href: '/partners' },
       { name: 'Awards', href: '/awards' },
       { name: 'Careers', href: '/careers' },
@@ -35,18 +35,19 @@ export const footerColumns: FooterColumn[] = [
     title: 'Resources',
     links: [
       { name: 'Whitepaper', href: '/whitepaper' },
-      { name: 'Learn More', href: '/learn-more' },
-      { name: 'Client Downloads', href: '/download' },
+      { name: 'University', href: '/learn-more' },
+      { name: 'Investor Relations', href: '/investor-relations' },
+      { name: 'Documentation', href: '/documentation' },
       { name: 'Security & Compliance', href: '/#security' },
-      { name: 'Integrations', href: '/#integrations' },
-      { name: 'Pricing', href: '/#pricing' },
+      { name: 'Economy', href: '/economy' },
+      { name: 'Allocation', href: '/allocation' },
     ],
   },
   {
     title: 'Chapters',
     links: [
-      { name: 'Chapter I · The Gospel', href: '/#chapter-i' },
-      { name: 'Chapter II · Staking Tiers', href: '/#chapter-ii' },
+      { name: 'Chapter I · Monetary Policy', href: '/monetary-policy' },
+      { name: 'Chapter II · Governance', href: '/governance' },
       { name: 'Chapter III · The Covenant', href: '/#chapter-iii' },
     ],
   },

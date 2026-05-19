@@ -68,7 +68,7 @@ export function Footer() {
         <div className="mt-8 flex flex-col items-center justify-between gap-4 text-center text-xs text-mist sm:flex-row sm:text-left">
           <p>© {year} Hated By Many Holdings. All rights reserved.</p>
           <p className="uppercase tracking-[0.2em]">
-            Crafted with precision · Vercel Analytics enabled
+            Structured for audit · Built for permanence
           </p>
         </div>
       </div>
