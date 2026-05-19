@@ -21,12 +21,6 @@ export function Footer() {
               <MapPin className="h-4 w-4 text-champagne" />
               Wyoming, USA
             </div>
-            <Link
-              href="/login"
-              className="mt-6 inline-flex rounded-full border border-stone/20 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-parchment transition-colors hover:border-champagne/50"
-            >
-              Console login
-            </Link>
           </div>
 
           {footerColumns.map((section) => (

@@ -12,8 +12,9 @@ export const footerColumns: FooterColumn[] = [
       { name: 'Three Wise Men', href: '/three-wise-men' },
       { name: 'Economy', href: '/economy' },
       { name: 'Allocation', href: '/allocation' },
-      { name: 'Network · Protocol', href: '/whitepaper' },
-      { name: 'Solutions', href: '/solutions' },
+      { name: 'Michelangelo', href: '/michelangelo' },
+      { name: 'Kiss', href: '/kiss' },
+      { name: 'Vanity', href: '/vanity' },
       { name: 'Treasury', href: '/wallet' },
       { name: 'Collections', href: '/collections' },
       { name: 'Non-Custodial Wallet', href: '/wallet' },
@@ -24,11 +25,8 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { name: 'About Us', href: '/about-us' },
       { name: 'Thesis', href: '/thesis' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'Awards', href: '/awards' },
       { name: 'Careers', href: '/careers' },
       { name: 'News', href: '/news' },
-      { name: 'Craftsmanship', href: '/craftsmanship' },
     ],
   },
   {
@@ -38,8 +36,6 @@ export const footerColumns: FooterColumn[] = [
       { name: 'University', href: '/learn-more' },
       { name: 'Investor Relations', href: '/investor-relations' },
       { name: 'Documentation', href: '/documentation' },
-      { name: 'Accreditation', href: '/accreditation' },
-      { name: 'Security & Compliance', href: '/security-compliance' },
     ],
   },
   {
@@ -55,9 +51,6 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { name: 'Customer Service', href: '/customer-service' },
       { name: 'Legal & Disclosures', href: '/legal' },
-      { name: 'Console Login', href: '/login' },
-      { name: 'Request Briefing', href: '/learn-more' },
-      { name: 'Status · All Systems', href: '/network' },
     ],
   },
 ]
@@ -66,6 +59,6 @@ export const footerUtilityLinks: FooterLink[] = [
   { name: 'Privacy', href: '/legal' },
   { name: 'Terms', href: '/legal' },
   { name: 'DPA', href: '/legal' },
-  { name: 'SOC 2', href: '/security-compliance' },
+  { name: 'SOC 2', href: '/legal' },
   { name: 'GitHub', href: 'https://github.com/hbmandcompany/HatedByMany' },
 ]
